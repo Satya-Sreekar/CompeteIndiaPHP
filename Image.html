@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image</title>
+    <link rel="stylesheet" href="3.css">
+    <script type="text/javascript">
+    function loadImg(self){
+           var fileName=self.files[0];
+           var srcSource=URL.createObjectURL(fileName);
+           targetImg.src=srcSource;
+           targetImg.load();
+    }
+    </script>
+</head>
+<body>
+    <center>
+     <h1 align="Center"> Image Demo</h1>
+     <input type="file" name="file" onchange="loadImg(this);"/>
+     <br><br>
+     <Img id="targetImg"  width="720" height="480"> </Img>
+    </center>k  
+</body>
+</html>

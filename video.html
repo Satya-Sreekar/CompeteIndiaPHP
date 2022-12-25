@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> video</title>
+    <link rel="stylesheet" href="3.css">
+
+    <script type="text/javascript">
+    function loadVideo(self){
+           var fileName=self.files[0];
+           var srcSource=URL.createObjectURL(fileName);
+           targetVideo.src=srcSource;
+           targetVideo.load();
+    }
+    </script>
+</head>
+<body>
+    <center>
+        <h1> Video File Uploader</h1>
+        <input type="file" name="file" onchange="loadVideo(this);"/>
+        <BR><BR>
+        <video id="targetVideo"  width="720" height="480" controls> </video>   
+    </center>
+     
+</body>
+</html>

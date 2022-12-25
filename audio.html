@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio</title>
+    <link rel="stylesheet" href="3.css">
+    <script type="text/javascript">
+    function loadAudio(self){
+           var fileName=self.files[0];
+           var srcSource=URL.createObjectURL(fileName);
+           targetAudio.src=srcSource;
+           targetAudio.load();
+    }
+    </script>
+</head>
+<body>
+    <center>
+     <h1 align="Center"> Audio Demo</h1>
+     <input type="file" name="file" onchange="loadAudio(this);"/>
+     <br><br>
+     <audio id="targetAudio"  width="640" height="480" controls> </audio>
+    </center>
+</body>
+</html>
